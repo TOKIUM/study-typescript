@@ -21,5 +21,5 @@ $ dc exec node node --version
 $ dc exec node yarn --version
 
 # tsc
-$ dce node yarn tsc
+$ dce node yarn tsc src/greeter.ts # will generate src/greeter.js
 ```
