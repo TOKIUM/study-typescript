@@ -19,4 +19,7 @@ $ dc up -d
 # show the versions
 $ dc exec node node --version
 $ dc exec node yarn --version
+
+# tsc
+$ dce node yarn tsc
 ```
