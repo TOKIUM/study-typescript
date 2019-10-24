@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  node:
+    # node, yarnコマンド実行用コンテナ
+    # mkdir node_modulesしておく
+    # dce node yarn install --network-timeout 1000000
+    # dce node yarn build
+    # dce node yarn test
+    # dce node yarn watch
+    # dce node /bin/sh してからいろいろコマンドを実行
+    # ↓ yarn watchがメモリエラーで辛い時はNODE_MAX_OLD_SPACE_SIZE=8192などを指定する
+    # dce node -e NODE_MAX_OLD_SPACE_SIZE=8192 yarn watch
+    container_name: ts_node
+    build:
+      context: .
+      dockerfile: docker/node/Dockerfile
+    user: "node"
+    working_dir: /home/node
+    volumes:
+      - ./node_modules:/home/node/node_modules
+      - ./package.json:/home/node/package.json
+      - ./yarn.lock:/home/node/yarn.lock
+    command: /bin/sh -c "while sleep 3600; do :; done"
