@@ -1,3 +1,1 @@
-export default function greeter(person: string) {
-    return "Hello, " + person;
-}
+export default (person: string) => "Hello, " + person;
