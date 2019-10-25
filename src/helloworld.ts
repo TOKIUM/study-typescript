@@ -1,1 +1,1 @@
-export default (person: string) => "Hello, " + person;
+export default (person: string): string => "Hello, " + person;
