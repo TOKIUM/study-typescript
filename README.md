@@ -17,8 +17,8 @@ $ dc build
 $ dc up -d
 
 # show the versions
-$ dc exec node node --version
-$ dc exec node yarn --version
+$ dce node node --version
+$ dce node yarn --version
 
 # tsc
 $ dce node yarn tsc src/helloworld.ts # will generate src/helloworld.js
