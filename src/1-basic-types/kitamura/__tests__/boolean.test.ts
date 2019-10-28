@@ -1,5 +1,3 @@
-
-
 function nyanEnabled(animal: string): boolean {
   switch(animal) {
     case 'cat':
