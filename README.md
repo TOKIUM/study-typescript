@@ -4,6 +4,7 @@
 
 ```sh
 # aliases
+# set the following aliases to your shell (.bashrc, .bash_profile, ...)
 alias dc='docker-compose'
 alias dcr='dc run --rm'
 alias dce='dc exec'
@@ -13,7 +14,7 @@ alias dce='dc exec'
 # pull container images
 $ dc build
 
-# boot
+# boot the containers
 $ dc up -d
 
 # show the versions
@@ -24,5 +25,5 @@ $ dce node yarn --version
 $ dce node yarn tsc src/helloworld.ts # will generate src/helloworld.js
 
 # jest
-$ dce node yarn jest
+$ dce node yarn jest # will run all tests
 ```
