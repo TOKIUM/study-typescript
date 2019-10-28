@@ -22,4 +22,7 @@ $ dc exec node yarn --version
 
 # tsc
 $ dce node yarn tsc src/helloworld.ts # will generate src/helloworld.js
+
+# jest
+$ dce node yarn jest
 ```
