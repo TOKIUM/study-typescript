@@ -20,6 +20,9 @@ $ dc up -d
 $ dc exec node node --version
 $ dc exec node yarn --version
 
+# setup
+$ dce node yarn install
+
 # tsc
 $ dce node yarn tsc src/helloworld.ts # will generate src/helloworld.js
 
