@@ -5,6 +5,7 @@
  * @param {string} displayId 文字列
  * @param {string} name 文字列
  * @param {Project} project Project
+ * @return {boolean}
  */
 function containSearchText(displayId: string, name: string, project: Project) {
   return (!displayId || (project.displayId.indexOf(displayId) > -1))

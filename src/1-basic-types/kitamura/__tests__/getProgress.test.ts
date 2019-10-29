@@ -1,8 +1,9 @@
 // app/frontend/javascripts/applications/reports/actions/corporateReport.js
 /**
  * 進捗どうですか？
- * @param {Array} finish 配列っぽい？
- * @param {Array} remaining 配列っぽい？
+ * @param {Array<string>} finish 配列っぽい？
+ * @param {Array<string>} remaining 配列っぽい？
+ * @return {number} 進捗
  */
 function getProgress(finish?: Array<string>, remaining?: Array<string>): number {
   if (!finish || !remaining) {
