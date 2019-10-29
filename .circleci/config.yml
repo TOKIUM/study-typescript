@@ -1,0 +1,18 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/src
+    docker:
+      - image: circleci/node:4.8.2 # これはどうするのがいいのか
+    steps:
+      - checkout
+      - run:
+        name: install-yarn
+        command: yarn install
+      -save_cache:
+        key: dependency-cache-{{ checksum "package.json" }}
+        paths:
+          - ./node_modules
+      -run:
+        name: run-test
+        command: node yarn jest
