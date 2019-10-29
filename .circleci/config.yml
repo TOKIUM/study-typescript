@@ -1,9 +1,9 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/src
+    working_directory: ~
     docker:
-      - image: circleci/node:4.8.2 # これはどうするのがいいのか
+      - image: circleci/node:12.13.0
     steps:
       - checkout
       - run:
