@@ -1,6 +1,6 @@
 // lodash インスコが面倒だったので自前実装
 // https://lodash.com/docs/4.17.15#indexOf
-const _indexOf = (arr: any[], val: any, fromIndex?: number): number => {
+const _indexOf = (arr: any[], val: any, fromIndex = 0): number => {
   var rets: number[] = []
   arr.forEach((x: any, idx: number) => {
     if (x === val) { rets.push(idx) }
