@@ -7,12 +7,12 @@ jobs:
     steps:
       - checkout
       - run:
-        name: install-yarn
-        command: yarn install
+          name: install-yarn
+          command: yarn install
       - save_cache:
-        key: dependency-cache-{{ checksum "package.json" }}
-        paths:
-          - ./node_modules
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
       - run:
-        name: run-test
-        command: node yarn jest
+          name: run-test
+          command: node yarn jest
