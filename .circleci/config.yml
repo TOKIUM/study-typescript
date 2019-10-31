@@ -15,4 +15,4 @@ jobs:
             - ./node_modules
       - run:
           name: run-test
-          command: node yarn jest
+          command: yarn jest
