@@ -48,8 +48,8 @@ $ dce node yarn jest # will run all tests
 | Start at | Content |
 | -- | -- |
 | 2019/10/28 ~ | https://www.typescriptlang.org/docs/handbook/basic-types.html |
-|  | https://www.typescriptlang.org/docs/handbook/variable-declarations.html |
-|  | https://www.typescriptlang.org/docs/handbook/interfaces.html |
+| 2019/10/29 ~ | https://www.typescriptlang.org/docs/handbook/variable-declarations.html |
+| 2019/10/30 ~ | https://www.typescriptlang.org/docs/handbook/interfaces.html |
 |  | https://www.typescriptlang.org/docs/handbook/classes.html |
 |  | https://www.typescriptlang.org/docs/handbook/functions.html |
 |  | https://www.typescriptlang.org/docs/handbook/generics.html |
