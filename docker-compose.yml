@@ -19,6 +19,7 @@ services:
     volumes:
       - ./node_modules:/home/node/node_modules
       - ./package.json:/home/node/package.json
+      - ./.eslintrc.json
       - ./tsconfig.json:/home/node/tsconfig.json
       - ./src:/home/node/src
       - ./yarn.lock:/home/node/yarn.lock
