@@ -1,5 +1,5 @@
-import greeter from '#/helloworld';
+import greeter from "#/helloworld";
 
-test('greeter', () => {
-  expect(greeter('cat')).toBe('Hello, cat');
+test("greeter", () => {
+  expect(greeter("cat")).toBe("Hello, cat");
 });

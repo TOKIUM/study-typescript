@@ -7,51 +7,57 @@
  * @param {Project} project Project
  * @return {boolean}
  */
-function containSearchText(displayId: string, name: string, project: Project) {
-  return (!displayId || (project.displayId.indexOf(displayId) > -1))
-    && (!name || (project.name && project.name.indexOf(name) > -1))
+function containSearchText(
+  displayId: string,
+  name: string,
+  project: Project
+): boolean {
+  return (
+    (!displayId || project.displayId.indexOf(displayId) > -1) &&
+    (!name || (project.name && project.name.indexOf(name) > -1))
+  );
 }
 
 class Project {
-  displayId: string
-  name: string
+  displayId: string;
+  name: string;
 
   constructor(displayId: string, name: string) {
-    this.displayId = displayId
-    this.name = name
+    this.displayId = displayId;
+    this.name = name;
   }
 }
 
-describe('containSearchText', () => {
-  test('same displayId and name with the project', () => {
-    const displayId: string = 'a'
-    const name: string = 'A'
-    const project: Project = new Project(displayId, name)
+describe("containSearchText", () => {
+  test("same displayId and name with the project", () => {
+    const displayId = "a";
+    const name = "A";
+    const project: Project = new Project(displayId, name);
 
-    expect(containSearchText(displayId, name, project)).toBe(true)
-  })
+    expect(containSearchText(displayId, name, project)).toBe(true);
+  });
 
-  test('with different displayId', () => {
-    const displayId: string = 'a'
-    const name: string = 'A'
-    const project: Project = new Project('displayId', name)
+  test("with different displayId", () => {
+    const displayId = "a";
+    const name = "A";
+    const project: Project = new Project("displayId", name);
 
-    expect(containSearchText(displayId, name, project)).toBe(true)
-  })
+    expect(containSearchText(displayId, name, project)).toBe(true);
+  });
 
-  test('with different name', () => {
-    const displayId: string = 'a'
-    const name: string = 'A'
-    const project: Project = new Project(displayId, 'name')
+  test("with different name", () => {
+    const displayId = "a";
+    const name = "A";
+    const project: Project = new Project(displayId, "name");
 
-    expect(containSearchText(displayId, name, project)).toBe(false)
-  })
+    expect(containSearchText(displayId, name, project)).toBe(false);
+  });
 
-  test('with different displayId and name', () => {
-    const displayId: string = 'a'
-    const name: string = 'A'
-    const project: Project = new Project('displayId', 'name')
+  test("with different displayId and name", () => {
+    const displayId = "a";
+    const name = "A";
+    const project: Project = new Project("displayId", "name");
 
-    expect(containSearchText(displayId, name, project)).toBe(false)
-  })
-})
+    expect(containSearchText(displayId, name, project)).toBe(false);
+  });
+});
