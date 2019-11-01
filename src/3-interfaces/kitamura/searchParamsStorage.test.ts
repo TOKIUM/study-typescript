@@ -1,46 +1,4 @@
-// app/frontend/javascripts/applications/transactions/utilities/searchParamsStorage.js
-interface SearchParam {
-  status: string[];
-  shopName: string;
-  categoryName: string;
-  ownerName: string;
-  sequenceNum: string;
-  exportLineId: string;
-  dateFrom: string;
-  dateTo: string;
-  amountFrom: string;
-  amountTo: string;
-  scope: boolean;
-  departmentId: string;
-  includeChildDepartment: boolean;
-}
-
-class SearchParamsStorage {
-  private _data: SearchParam;
-  get data(): SearchParam {
-    return this._data || this.defaultData;
-  }
-  setData(params): void {
-    this._data = { ...this._data, ...params };
-  }
-  get defaultData(): SearchParam {
-    return {
-      status: ["default", "waiting_for_worker", "denied"],
-      shopName: "",
-      categoryName: "",
-      ownerName: "",
-      sequenceNum: "",
-      exportLineId: "",
-      dateFrom: "",
-      dateTo: "",
-      amountFrom: "",
-      amountTo: "",
-      scope: false,
-      departmentId: "",
-      includeChildDepartment: true
-    };
-  }
-}
+import SearchParamsStorage from "./searchParamsStorage";
 
 describe("SearchParamsStorage", () => {
   test("default data", () => {
