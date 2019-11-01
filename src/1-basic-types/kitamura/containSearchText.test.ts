@@ -7,7 +7,11 @@
  * @param {Project} project Project
  * @return {boolean}
  */
-function containSearchText(displayId: string, name: string, project: Project) {
+function containSearchText(
+  displayId: string,
+  name: string,
+  project: Project
+): boolean {
   return (
     (!displayId || project.displayId.indexOf(displayId) > -1) &&
     (!name || (project.name && project.name.indexOf(name) > -1))

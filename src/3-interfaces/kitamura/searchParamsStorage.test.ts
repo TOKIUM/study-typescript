@@ -20,7 +20,7 @@ class SearchParamsStorage {
   get data(): SearchParam {
     return this._data || this.defaultData;
   }
-  setData(params) {
+  setData(params): void {
     this._data = { ...this._data, ...params };
   }
   get defaultData(): SearchParam {

@@ -17,7 +17,7 @@ class SearchBox {
    * @param {boolean} checked checked or not
    * @param {string} value input value
    */
-  handleStatusChange(checked: boolean, value: string) {
+  handleStatusChange(checked: boolean, value: string): void {
     const filtered: string[] = this.searchCondition.status.filter(
       x => x !== value || checked
     );
@@ -26,7 +26,7 @@ class SearchBox {
     this.setSearchConditions({ status });
   }
 
-  private setSearchConditions(searchCondition: SearchCondition) {
+  private setSearchConditions(searchCondition: SearchCondition): void {
     this.searchCondition = searchCondition;
   }
 }
