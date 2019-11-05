@@ -4,22 +4,22 @@ describe("Cat", () => {
   const cat = new Cat('sleeping');
 
   test("#run", () => {
-    cat.run()
+    cat.run();
     expect(cat.getState()).toEqual('running');
   });
 
   test("#play", () => {
-    cat.play()
+    cat.play();
     expect(cat.getState()).toEqual('playing');
   });
 
   test("#eat", () => {
-    cat.eat()
+    cat.eat();
     expect(cat.getState()).toEqual('eating');
   });
 
   test("#sleep", () => {
-    cat.sleep()
+    cat.sleep();
     expect(cat.getState()).toEqual('sleeping');
   });
 })
