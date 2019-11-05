@@ -30,6 +30,10 @@ $ dce node yarn tsc src/helloworld.ts # will generate src/helloworld.js
 
 # jest
 $ dce node yarn jest # will run all tests
+$ dce node yarn jest --watchAll # will watch file modifications and run all tests
+
+# eslint
+$ dce node yarn lint # will run eslint against all .ts files
 ```
 
 ## Policy
