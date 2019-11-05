@@ -50,7 +50,7 @@ $ dce node yarn jest # will run all tests
 | 2019/10/28 ~ | https://www.typescriptlang.org/docs/handbook/basic-types.html |
 | 2019/10/29 ~ | https://www.typescriptlang.org/docs/handbook/variable-declarations.html |
 | 2019/10/30 ~ | https://www.typescriptlang.org/docs/handbook/interfaces.html |
-|  | https://www.typescriptlang.org/docs/handbook/classes.html |
+| 2019/11/05 ~ | https://www.typescriptlang.org/docs/handbook/classes.html |
 |  | https://www.typescriptlang.org/docs/handbook/functions.html |
 |  | https://www.typescriptlang.org/docs/handbook/generics.html |
 |  | https://www.typescriptlang.org/docs/handbook/enums.html |
