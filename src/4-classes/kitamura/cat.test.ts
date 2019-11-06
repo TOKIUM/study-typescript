@@ -14,6 +14,7 @@ describe("Cat", () => {
   test("#play", () => {
     const cat = new Cat(name);
     expect(cat.play("ひも")).toEqual("ひも うっはww ワロタwwww");
+    expect(() => { cat.play("じゃらし") }).toThrowError("いまひもで遊んでるの！");
   });
   test("#eat", () => {
     const cat = new Cat(name);
