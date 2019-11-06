@@ -1,19 +1,24 @@
 import Nyan from "./nyan";
 import Animal from "./animal";
 
+type CatName = "たま" | "みけ" | "わださん";
+
 export default class Cat implements Nyan, Animal {
   private name: string;
-  constructor(name: string) {
-    if (["たま", "みけ", "わださん"].indexOf(name) < 0) {
-      throw Error("なまえがおかしい");
-    }
+  private playingToy: any | null;
+  constructor(name: CatName) {
     this.name = name;
+    this.playingToy = null;
   }
   run(): string {
     return `${this.name}は走った！`;
   }
-  play(toy: string): string {
-    return `${toy} うっはww ワロタwwww`;
+  play(toy: any): string {
+    if (this.playingToy) {
+      throw Error(`いま${this.playingToy}で遊んでるの！`);
+    }
+    this.playingToy = toy;
+    return `${this.playingToy} うっはww ワロタwwww`;
   }
   eat(food: string): string {
     return `${food} うまwwww`;
