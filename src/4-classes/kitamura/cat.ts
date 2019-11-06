@@ -1,12 +1,11 @@
 import Nyan from "./nyan";
 import Animal from "./animal";
 
+type CatName = "たま" | "みけ" | "わださん";
+
 export default class Cat implements Nyan, Animal {
   private name: string;
-  constructor(name: string) {
-    if (["たま", "みけ", "わださん"].indexOf(name) < 0) {
-      throw Error("なまえがおかしい");
-    }
+  constructor(name: CatName) {
     this.name = name;
   }
   run(): string {
