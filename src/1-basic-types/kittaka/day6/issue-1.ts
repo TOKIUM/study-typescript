@@ -1,26 +1,35 @@
-interface Nyan {
+import Animal from './animal';
+
+interface Nyan extends Animal{
   run(): void;
-  play(): void;
-  eat(): void;
-  sleep(): void;
-}
+};
 
 type CatState =
   'running' | 'playing' | 'eating' | 'sleeping';
 
-class Cat implements Nyan {
-  private state: CatState;
+type CatName =
+  'たま' | 'みけ' | 'わださん';
 
-  constructor(state: CatState) {
-    this.state = state;
+class Cat implements Nyan {
+  private name: CatName;
+  private state: CatState;
+  public toy: unknown; // おもちゃは取り上げられる
+
+  constructor(name: CatName) {
+    this.toy = null;
+    this.name = name;
   }
 
   run() {
     this.state = 'running'
   }
 
-  play() {
-    this.state = 'playing'
+  play(toy: unknown) {
+    if (this.toy === null) {
+      this.toy = toy
+    } else if (this.toy === toy) {
+      this.toy = toy
+    }
   }
 
   eat() {
@@ -33,6 +42,10 @@ class Cat implements Nyan {
 
   getState() {
     return this.state;
+  }
+
+  get showNamePlate() {
+    return this.name;
   }
 }
 
