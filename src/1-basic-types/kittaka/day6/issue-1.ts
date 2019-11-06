@@ -1,9 +1,8 @@
-interface Nyan {
+import Animal from './animal';
+
+interface Nyan extends Animal{
   run(): void;
-  play(): void;
-  eat(): void;
-  sleep(): void;
-}
+};
 
 type CatState =
   'running' | 'playing' | 'eating' | 'sleeping';
