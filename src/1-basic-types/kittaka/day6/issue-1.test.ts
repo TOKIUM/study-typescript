@@ -1,7 +1,7 @@
 import Cat from './issue-1';
 
 describe("Cat", () => {
-  const cat = new Cat('sleeping');
+  const cat = new Cat('わださん');
 
   test("#run", () => {
     cat.run();
@@ -9,8 +9,20 @@ describe("Cat", () => {
   });
 
   test("#play", () => {
-    cat.play();
-    expect(cat.getState()).toEqual('playing');
+    const toy = 'Ball'
+    cat.play(toy);
+    expect(cat.toy).toEqual(toy);
+  });
+
+  test("#play でのおもちゃの取替はダメ！", () => {
+    // 1回目の遊び
+    const toy = 'Ball'
+    cat.play(toy);
+
+    // 2回目の遊び
+    const nextToy: any = { name: '猫じゃらしを食べる' }
+    cat.play(nextToy);
+    expect(cat.toy).toEqual(toy);
   });
 
   test("#eat", () => {
