@@ -55,11 +55,14 @@ test('mikeCat', () => {
 test('play', () => {
   const mike = new MikeCat('みけ');
   const owner = new Person('かいぬし');
+  const stranger = new Person('おじじゃん');
   const nekojarashi = new lovingToy('ねこじゃらし');
   const ball = new ignoringToy('ボール');
 
   expect(mike.play(nekojarashi)).toEqual('ねこじゃらしで遊ぶのたのしいにゃん！！');
+  expect(mike.play(nekojarashi, owner)).toEqual('ねこじゃらしで遊ぶのたのしいにゃん！！');
   expect(mike.play(ball)).toEqual('zzz...');
   expect(mike.play(ball, owner)).toEqual('かいぬし、エサくれ！！');
+  expect(mike.play(ball, stranger)).toEqual('zzz...');
 })
 
