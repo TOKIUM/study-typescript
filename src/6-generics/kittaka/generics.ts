@@ -5,6 +5,7 @@ export const identity = <T>(arg: T): T => {
 export type Cat = {
   name: string;
   type: string;
+  calls?: string;
 }
 
 interface CatAware {
@@ -13,4 +14,9 @@ interface CatAware {
 
 export const play = <T extends CatAware>(cat: T): T => {
   return cat;
+}
+
+export const update_calls = <T extends CatAware>(arg: T): T => {
+  arg.cat.calls = 'nyan';
+  return arg;
 }
