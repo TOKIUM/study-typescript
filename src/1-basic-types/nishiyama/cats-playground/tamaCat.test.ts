@@ -24,7 +24,7 @@ class Person {
   }
 }
 
-export default class MikeCat extends Cat {
+export default class TamaCat extends Cat {
   readonly hairLength: number;
 
   constructor(name: catName) {
@@ -46,14 +46,14 @@ export default class MikeCat extends Cat {
 }
 
 test('mikeCat', () => {
-  const mike = new MikeCat('みけ');
-  expect(mike.name).toEqual('みけ');
+  const mike = new TamaCat('たま');
+  expect(mike.name).toEqual('たま');
   expect(mike.hairLength).toBe(10);
   expect(mike.yawn()).toEqual('Nyaaaaaaaaaaaaan');
 })
 
 test('play', () => {
-  const mike = new MikeCat('みけ');
+  const mike = new TamaCat('たま');
   const owner = new Person('かいぬし');
   const stranger = new Person('おじじゃん');
   const nekojarashi = new lovingToy('ねこじゃらし');
