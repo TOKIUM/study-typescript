@@ -10,4 +10,6 @@ export default class CatBox<T extends ICat> {
   add(cat: T) {
     this.ingredients.push(cat);
   }
+
+
 }

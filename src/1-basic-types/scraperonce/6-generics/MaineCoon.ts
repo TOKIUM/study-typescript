@@ -1,8 +1,5 @@
-import ICat from './ICat';
+import Cat from './Cat';
 
-export default class MaineCoon implements ICat {
-  constructor(
-    public name: string,
-    public color: string
-  ) { }
+export default class MaineCoon extends Cat {
+  public length: number = 6
 }
