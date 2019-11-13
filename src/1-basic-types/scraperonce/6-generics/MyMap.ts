@@ -2,7 +2,7 @@ export default class MyMap<K, V> {
   private keys = [] as K[];
   private values = [] as V[];
 
-  set(key: K, value: V) {
+  set(key: K, value: V): void {
     const index = this.searchIndex(key);
 
     if (index === -1) {
@@ -29,8 +29,8 @@ export default class MyMap<K, V> {
     if (index === -1) {
       return false;
     } else {
-      this.keys = this.keys.slice(0, index).concat(this.keys.slice(index + 1))
-      this.values = this.values.slice(0, index).concat(this.values.slice(index + 1))
+      this.keys = this.keys.slice(0, index).concat(this.keys.slice(index + 1));
+      this.values = this.values.slice(0, index).concat(this.values.slice(index + 1));
       return true;
     }
   }
