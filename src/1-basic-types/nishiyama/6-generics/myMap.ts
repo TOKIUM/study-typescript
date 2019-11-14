@@ -11,7 +11,7 @@ class MyMap<K, V> {
     const index = this.keys.indexOf(key);
 
     if (index === -1) {
-      return null;
+      return;
     }
 
     this.keys = this.keys.filter((key, idx) => {
