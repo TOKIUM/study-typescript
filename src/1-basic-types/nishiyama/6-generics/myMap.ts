@@ -21,7 +21,7 @@ class MyMap<K, V> {
   getValueOf(key: K): V {
     const index = this.keys.indexOf(key);
 
-    if (index === null) {
+    if (index === -1) {
       return null;
     }
 

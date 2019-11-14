@@ -20,12 +20,12 @@ test('catDictionary', () => {
   expect(catDic.getCount()).toBe(2);
 
   catDic.remove('たま');
-  expect(catDic.getValueOf('たま')).toBe(undefined);
+  expect(catDic.getValueOf('たま')).toBe(null);
   expect(catDic.getValueOf('みけ')).toBe(mike);
   expect(catDic.getCount()).toBe(1);
 
   catDic.remove('みけ');
-  expect(catDic.getValueOf('たま')).toBe(undefined);
-  expect(catDic.getValueOf('みけ')).toBe(undefined);
+  expect(catDic.getValueOf('たま')).toBe(null);
+  expect(catDic.getValueOf('みけ')).toBe(null);
   expect(catDic.getCount()).toBe(0);
 })
