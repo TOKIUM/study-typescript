@@ -57,7 +57,7 @@ $ dce node yarn lint # will run eslint against all .ts files
 | 2019/11/05 ~ | https://www.typescriptlang.org/docs/handbook/classes.html |
 | 2019/11/08 ~ | https://www.typescriptlang.org/docs/handbook/functions.html |
 | 2019/11/11 ~ | https://www.typescriptlang.org/docs/handbook/generics.html |
-|  | https://www.typescriptlang.org/docs/handbook/enums.html |
+| 2019/11/14 ~ | https://www.typescriptlang.org/docs/handbook/enums.html |
 |  | https://www.typescriptlang.org/docs/handbook/type-inference.html |
 |  | https://www.typescriptlang.org/docs/handbook/type-compatibility.html |
 |  | https://www.typescriptlang.org/docs/handbook/advanced-types.html |
