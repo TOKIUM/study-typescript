@@ -10,10 +10,14 @@ class MyMap<K, V> {
   remove(key: K): void {
     const index = this.keys.indexOf(key);
 
-    this.keys = this.keys.filter(function (key, idx) {
+    if (index === -1) {
+      return null;
+    }
+
+    this.keys = this.keys.filter((key, idx) => {
       return idx !== index;
     })
-    this.values = this.values.filter(function (value, idx) {
+    this.values = this.values.filter((value, idx) => {
       return idx !== index;
     })
   }
