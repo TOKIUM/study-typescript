@@ -4,12 +4,15 @@ export class Toy {
     return this._name;
   }
 }
+
 export class Ball extends Toy {
   protected _name = "ボール";
 }
+
 export class Nekojarashi extends Toy {
   protected _name = "ねこじゃらし";
 }
+
 export class Person {
   readonly name = "猫山 にゃん太郎";
 }
@@ -17,6 +20,7 @@ export class Person {
 export function play(toy: Toy): string {
   return `${toy.name}で遊んでいますにゃん😻`;
 }
+
 export function playWith(toy: Ball, person?: Person): string;
 export function playWith(toy: Nekojarashi, person?: Person): string;
 export function playWith(toy, person?: Person): string {

@@ -22,6 +22,7 @@ describe("play()", () => {
     const result = play<CatPerson>(person);
     expect(result).toEqual("にゃんにゃんしてるにゃん");
   });
+
   // test("with DogPerson", () => {
   //   const dog = new Dog();
   //   const person = new DogPerson(dog);

@@ -5,7 +5,8 @@ describe("NorweigianForestCat", () => {
   test("hairLength", () => {
     const cat = new NorweigianForestCat();
     expect(cat.hairLength).toBe(20);
-  })
+  });
+
   test("#play", () => {
     const cat = new NorweigianForestCat();
 
@@ -15,5 +16,5 @@ describe("NorweigianForestCat", () => {
 
     cat.play(new Ball());
     expect(cat.whatAreYouDoingNow()).toEqual("もうにゃんにゃん🐾🐾");
-  })
-})
+  });
+});

@@ -2,6 +2,7 @@ import { play, Toy, Ball, Nekojarashi, Person, playWith } from "./play";
 
 describe("play()", () => {
   const toy = new Toy();
+
   test("play(toy)", () => {
     expect(play(toy)).toEqual("おもちゃで遊んでいますにゃん😻");
   });
@@ -15,6 +16,7 @@ describe("playWith()", () => {
   test("playWith(toy: Ball)", () => {
     expect(playWith(ball)).toEqual("一人でボール遊びはさみしいにゃん");
   });
+
   test("playWith(toy: Nekojarasi)", () => {
     expect(playWith(nekojarasi)).toEqual("一人でもにゃんにゃんお😻");
   });
@@ -22,6 +24,7 @@ describe("playWith()", () => {
   test("playWith(toy: Ball, person)", () => {
     expect(playWith(ball, person)).toEqual("猫山 にゃん太郎にボール投げてもらったにゃん🐾");
   });
+
   test("playWith(toy: Nekojarasi, person)", () => {
     expect(playWith(nekojarasi, person)).toEqual("猫山 にゃん太郎のじゃらし方ウマすぎるwwwたまらんwwww");
   });

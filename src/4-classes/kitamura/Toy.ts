@@ -3,7 +3,7 @@ export abstract class Toy {
 }
 
 export class Nekojarashi extends Toy {
-  readonly name = 'ねこじゃらし';
+  readonly name = "ねこじゃらし";
 }
 
 export class Ball extends Toy {
