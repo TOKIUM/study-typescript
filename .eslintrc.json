@@ -16,6 +16,16 @@
       "error",
       "always",
       { "exceptAfterSingleLine": true }
-    ]
+    ],
+    "import/no-unresolved": "off", // 遅いので無効 https://github.com/typescript-eslint/typescript-eslint/issues/389
+    // ルールはここから調べられます
+    // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
+    "@typescript-eslint/no-unused-vars": ["error", {
+      "vars": "all",
+      "args": "after-used"
+    }],
+    "@typescript-eslint/explicit-function-return-type": "error", // 戻り値の型を強制する
+    "@typescript-eslint/no-explicit-any": "error", // any型は使用禁止
+    "@typescript-eslint/no-inferrable-types": "error" // 型推論できるところは型を書かない
   }
 }
