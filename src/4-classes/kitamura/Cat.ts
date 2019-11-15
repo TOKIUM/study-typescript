@@ -5,7 +5,7 @@ type CatName = "たま" | "みけ" | "わださん";
 
 export default class Cat implements Nyan, Animal {
   private name: string;
-  private playingToy: any | null;
+  private playingToy: any | null; // eslint-disable-line @typescript-eslint/no-explicit-any
 
   constructor(name: CatName) {
     this.name = name;
@@ -16,6 +16,7 @@ export default class Cat implements Nyan, Animal {
     return `${this.name}は走った！`;
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   play(toy: any): string {
     if (this.playingToy) {
       throw Error(`いま${this.playingToy}で遊んでるの！`);
