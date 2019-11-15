@@ -1,5 +1,5 @@
-import AbstractCat from "./abstractCat";
-import { Toy } from "./toy";
+import AbstractCat from "./AbstractCat";
+import { Toy } from "./Toy";
 
 export default class NorweigianForestCat extends AbstractCat {
   readonly hairLength = 20;

@@ -1,5 +1,5 @@
-import Nyan from "./nyan";
-import Animal from "./animal";
+import Nyan from "./Nyan";
+import Animal from "./Animal";
 
 type CatName = "たま" | "みけ" | "わださん";
 

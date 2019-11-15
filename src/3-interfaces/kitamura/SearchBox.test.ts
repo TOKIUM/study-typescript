@@ -1,4 +1,4 @@
-import SearchBox from "./searchBox";
+import SearchBox from "./SearchBox";
 
 describe("handleStatusChange", () => {
   test("check default", () => {

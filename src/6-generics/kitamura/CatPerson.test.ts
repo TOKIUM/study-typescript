@@ -1,4 +1,4 @@
-import { Cat, CatPerson, CatFood } from "./catPerson";
+import { Cat, CatPerson, CatFood } from "./CatPerson";
 
 class MyCat extends Cat {
   eat(food: CatFood): string {

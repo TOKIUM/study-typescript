@@ -1,5 +1,5 @@
-import NorweigianForestCat from "./norweigianForestCat";
-import { Nekojarashi, Ball } from "./toy";
+import NorweigianForestCat from "./NorweigianForestCat";
+import { Nekojarashi, Ball } from "./Toy";
 
 describe("NorweigianForestCat", () => {
   test("hairLength", () => {

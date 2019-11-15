@@ -1,5 +1,5 @@
 import containSearchText from "./containSearchText";
-import Project from "./project";
+import Project from "./Project";
 
 describe("containSearchText", () => {
   test("same displayId and name with the project", () => {

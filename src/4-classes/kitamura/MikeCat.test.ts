@@ -1,5 +1,5 @@
-import MikeCat from "./mikeCat";
-import { Nekojarashi, Ball } from "./toy";
+import MikeCat from "./MikeCat";
+import { Nekojarashi, Ball } from "./Toy";
 
 describe("MikeCat", () => {
   test("hairLength", () => {

@@ -1,4 +1,4 @@
-import Project from "./project";
+import Project from "./Project";
 
 // app/frontend/javascripts/applications/reports/components/ReportTable.jsx
 /**

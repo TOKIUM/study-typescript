@@ -1,4 +1,4 @@
-import SearchParamsStorage from "./searchParamsStorage";
+import SearchParamsStorage from "./SearchParamsStorage";
 
 describe("SearchParamsStorage", () => {
   test("default data", () => {

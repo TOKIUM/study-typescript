@@ -1,5 +1,5 @@
 // app/frontend/javascripts/applications/transactions/utilities/searchParamsStorage.js
-import SearchParam from "./searchParam";
+import SearchParam from "./SearchParam";
 
 export default class SearchParamsStorage {
   private _data: SearchParam;

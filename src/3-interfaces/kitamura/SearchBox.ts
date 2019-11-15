@@ -1,5 +1,5 @@
 // app/frontend/javascripts/applications/transactions/transaction_searchbox.jsx
-import SearchCondition from "./searchCondition";
+import SearchCondition from "./SearchCondition";
 
 export default class SearchBox {
   searchCondition: SearchCondition;

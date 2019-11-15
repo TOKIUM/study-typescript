@@ -1,4 +1,4 @@
-import ImmutableMap from "./immutableMap";
+import ImmutableMap from "./ImmutableMap";
 
 class Cat {
   constructor(public name: string) {}

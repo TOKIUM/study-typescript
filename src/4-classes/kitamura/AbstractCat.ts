@@ -1,4 +1,4 @@
-import { Toy } from "./toy";
+import { Toy } from "./Toy";
 
 export default abstract class AbstractCat {
   readonly hairLength: number;

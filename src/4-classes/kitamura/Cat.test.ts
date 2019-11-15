@@ -1,4 +1,4 @@
-import Cat from "./cat";
+import Cat from "./Cat";
 
 describe("Cat", () => {
   const name = "たま";
