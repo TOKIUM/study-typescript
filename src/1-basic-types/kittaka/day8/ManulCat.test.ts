@@ -1,7 +1,7 @@
-import ManulCat from './ManulCat';
+import ManulCat from "./ManulCat";
 
 describe("ManulCat", () => {
-  const manul = new ManulCat;
+  const manul = new ManulCat();
 
   test("マヌル猫は確実に毛が絡まる", () => {
     manul.isTangledHair();
@@ -9,7 +9,7 @@ describe("ManulCat", () => {
   });
 
   test("おもちゃで遊ぶ", () => {
-    const toy = 'ねずみ'
+    const toy = "ねずみ";
     expect(manul.play(toy)).toBe(`${toy} くれるとか、さすがやな!!!`);
-  })
-})
+  });
+});

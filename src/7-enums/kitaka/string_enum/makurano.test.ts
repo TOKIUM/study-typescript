@@ -1,4 +1,4 @@
-import readAkebono, { Makurano } from './makurano';
+import readAkebono, { Makurano } from "./makurano";
 
 test("readAkebono", () => {
   expect(readAkebono(1)).toEqual(Makurano.SPRING);

@@ -30,7 +30,9 @@ export default class MyMap<K, V> {
       return false;
     } else {
       this.keys = this.keys.slice(0, index).concat(this.keys.slice(index + 1));
-      this.values = this.values.slice(0, index).concat(this.values.slice(index + 1));
+      this.values = this.values
+        .slice(0, index)
+        .concat(this.values.slice(index + 1));
       return true;
     }
   }

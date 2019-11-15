@@ -1,5 +1,5 @@
-import ICat from './ICat';
-import CatBox from './CatBox';
+import ICat from "./ICat";
+import CatBox from "./CatBox";
 
 export function duplicate<T>(item: T): T[] {
   return [item, item];

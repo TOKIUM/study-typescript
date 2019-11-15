@@ -1,7 +1,7 @@
 import ICat from "./ICat";
 
 export default class CatBox<T extends ICat> {
-  ingredients: T[] = [] as T[]
+  ingredients: T[] = [] as T[];
 
   constructor(cats: T[]) {
     this.ingredients = this.ingredients.concat(cats);
@@ -10,6 +10,4 @@ export default class CatBox<T extends ICat> {
   add(cat: T) {
     this.ingredients.push(cat);
   }
-
-
 }

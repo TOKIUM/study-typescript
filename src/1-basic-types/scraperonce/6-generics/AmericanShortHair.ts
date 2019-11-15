@@ -1,5 +1,5 @@
-import Cat from './Cat';
+import Cat from "./Cat";
 
 export default class AmericanShortHair extends Cat {
-  public length: number = 2
+  public length = 2;
 }

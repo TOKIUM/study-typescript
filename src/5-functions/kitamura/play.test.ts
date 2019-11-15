@@ -22,10 +22,14 @@ describe("playWith()", () => {
   });
 
   test("playWith(toy: Ball, person)", () => {
-    expect(playWith(ball, person)).toEqual("猫山 にゃん太郎にボール投げてもらったにゃん🐾");
+    expect(playWith(ball, person)).toEqual(
+      "猫山 にゃん太郎にボール投げてもらったにゃん🐾"
+    );
   });
 
   test("playWith(toy: Nekojarasi, person)", () => {
-    expect(playWith(nekojarasi, person)).toEqual("猫山 にゃん太郎のじゃらし方ウマすぎるwwwたまらんwwww");
+    expect(playWith(nekojarasi, person)).toEqual(
+      "猫山 にゃん太郎のじゃらし方ウマすぎるwwwたまらんwwww"
+    );
   });
 });

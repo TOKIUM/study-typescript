@@ -1,9 +1,7 @@
-import ICat from './ICat';
+import ICat from "./ICat";
 
 export default class CatPerson<T extends ICat> {
-  constructor(
-    private cat: T
-  ) { }
+  constructor(private cat: T) {}
 
   sayName(): string {
     return `なまえは ${this.cat.name} だにゃー`;

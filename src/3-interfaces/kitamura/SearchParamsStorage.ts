@@ -6,9 +6,11 @@ export default class SearchParamsStorage {
   get data(): SearchParam {
     return this._data || this.defaultData;
   }
+
   setData(params): void {
     this._data = { ...this._data, ...params };
   }
+
   get defaultData(): SearchParam {
     return {
       status: ["default", "waiting_for_worker", "denied"],

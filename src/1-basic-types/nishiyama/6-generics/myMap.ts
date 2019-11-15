@@ -16,10 +16,10 @@ class MyMap<K, V> {
 
     this.keys = this.keys.filter((key, idx) => {
       return idx !== index;
-    })
+    });
     this.values = this.values.filter((value, idx) => {
       return idx !== index;
-    })
+    });
   }
 
   getValueOf(key: K): V {

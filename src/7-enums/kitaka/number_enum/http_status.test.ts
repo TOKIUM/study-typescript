@@ -1,5 +1,5 @@
-import getStatusCode from './http_status';
+import getStatusCode from "./http_status";
 
 test("getStatusCode", () => {
-  expect(getStatusCode('OK')).toEqual(200);
+  expect(getStatusCode("OK")).toEqual(200);
 });

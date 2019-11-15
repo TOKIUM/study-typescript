@@ -1,17 +1,17 @@
-import Cat, { catName } from './cat';
+import Cat, { catName } from "./cat";
 
 class lovingToy {
-  name: 'ねこじゃらし' | '紙くず';
+  name: "ねこじゃらし" | "紙くず";
 
-  constructor(name: 'ねこじゃらし' | '紙くず') {
+  constructor(name: "ねこじゃらし" | "紙くず") {
     this.name = name;
   }
 }
 
 class ignoringToy {
-  name: 'ボール' | 'ちゅーる';
+  name: "ボール" | "ちゅーる";
 
-  constructor(name: 'ボール' | 'ちゅーる') {
+  constructor(name: "ボール" | "ちゅーる") {
     this.name = name;
   }
 }
@@ -37,32 +37,39 @@ export default class MikeCat extends Cat {
   play(toy, person?): string {
     if (toy instanceof lovingToy) {
       return `${toy.name}で遊ぶのたのしいにゃん！！`;
-    } else if (toy instanceof ignoringToy && person && person.name === 'かいぬし') {
+    } else if (
+      toy instanceof ignoringToy &&
+      person &&
+      person.name === "かいぬし"
+    ) {
       return `かいぬし、エサくれ！！`;
     } else {
-      return 'zzz...';
+      return "zzz...";
     }
   }
 }
 
-test('mikeCat', () => {
-  const mike = new MikeCat('みけ');
-  expect(mike.name).toEqual('みけ');
+test("mikeCat", () => {
+  const mike = new MikeCat("みけ");
+  expect(mike.name).toEqual("みけ");
   expect(mike.hairLength).toBe(10);
-  expect(mike.yawn()).toEqual('Nyaaaaaaaaaaaaan');
-})
+  expect(mike.yawn()).toEqual("Nyaaaaaaaaaaaaan");
+});
 
-test('play', () => {
-  const mike = new MikeCat('みけ');
-  const owner = new Person('かいぬし');
-  const stranger = new Person('おじじゃん');
-  const nekojarashi = new lovingToy('ねこじゃらし');
-  const ball = new ignoringToy('ボール');
+test("play", () => {
+  const mike = new MikeCat("みけ");
+  const owner = new Person("かいぬし");
+  const stranger = new Person("おじじゃん");
+  const nekojarashi = new lovingToy("ねこじゃらし");
+  const ball = new ignoringToy("ボール");
 
-  expect(mike.play(nekojarashi)).toEqual('ねこじゃらしで遊ぶのたのしいにゃん！！');
-  expect(mike.play(nekojarashi, owner)).toEqual('ねこじゃらしで遊ぶのたのしいにゃん！！');
-  expect(mike.play(ball)).toEqual('zzz...');
-  expect(mike.play(ball, owner)).toEqual('かいぬし、エサくれ！！');
-  expect(mike.play(ball, stranger)).toEqual('zzz...');
-})
-
+  expect(mike.play(nekojarashi)).toEqual(
+    "ねこじゃらしで遊ぶのたのしいにゃん！！"
+  );
+  expect(mike.play(nekojarashi, owner)).toEqual(
+    "ねこじゃらしで遊ぶのたのしいにゃん！！"
+  );
+  expect(mike.play(ball)).toEqual("zzz...");
+  expect(mike.play(ball, owner)).toEqual("かいぬし、エサくれ！！");
+  expect(mike.play(ball, stranger)).toEqual("zzz...");
+});

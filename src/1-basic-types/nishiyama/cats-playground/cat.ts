@@ -1,4 +1,4 @@
-export type catName = 'たま' | 'みけ' | 'わださん';
+export type catName = "たま" | "みけ" | "わださん";
 
 interface Nyan {
   name: catName;
@@ -18,12 +18,12 @@ export default abstract class Cat implements Nyan {
   }
 
   yawn(): string {
-    return 'Nyaaaaaaaaaaaaan';
+    return "Nyaaaaaaaaaaaaan";
   }
 
   play(toy: any): void {
     if (this.toy !== null && this.toy !== toy) {
-      throw new Error('気分じゃないにゃん');
+      throw new Error("気分じゃないにゃん");
     }
 
     this.toy = toy;

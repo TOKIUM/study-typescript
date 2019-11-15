@@ -21,11 +21,11 @@ describe("Cat", () => {
 
   test("#eat", () => {
     const cat = new Cat(name);
-    expect(cat.eat("ねぎ")).toEqual("ねぎ うまwwww")
+    expect(cat.eat("ねぎ")).toEqual("ねぎ うまwwww");
   });
 
   test("#sleep", () => {
     const cat = new Cat(name);
-    expect(cat.sleep(30)).toEqual("HPが30回復した！")
+    expect(cat.sleep(30)).toEqual("HPが30回復した！");
   });
-})
+});

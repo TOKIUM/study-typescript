@@ -1,5 +1,5 @@
-import Cat from './Cat';
+import Cat from "./Cat";
 
 export default class MaineCoon extends Cat {
-  public length: number = 6
+  public length = 6;
 }

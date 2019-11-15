@@ -1,14 +1,12 @@
-import Animal from './animal';
+import Animal from "./animal";
 
-interface Nyan extends Animal{
+interface Nyan extends Animal {
   run(): void;
-};
+}
 
-type CatState =
-  'running' | 'playing' | 'eating' | 'sleeping';
+type CatState = "running" | "playing" | "eating" | "sleeping";
 
-type CatName =
-  'たま' | 'みけ' | 'わださん';
+type CatName = "たま" | "みけ" | "わださん";
 
 class Cat implements Nyan {
   private name: CatName;
@@ -21,23 +19,23 @@ class Cat implements Nyan {
   }
 
   run() {
-    this.state = 'running'
+    this.state = "running";
   }
 
   play(toy: unknown) {
     if (this.toy === null) {
-      this.toy = toy
+      this.toy = toy;
     } else if (this.toy === toy) {
-      this.toy = toy
+      this.toy = toy;
     }
   }
 
   eat() {
-    this.state = 'eating'
+    this.state = "eating";
   }
 
   sleep() {
-    this.state = 'sleeping'
+    this.state = "sleeping";
   }
 
   getState() {

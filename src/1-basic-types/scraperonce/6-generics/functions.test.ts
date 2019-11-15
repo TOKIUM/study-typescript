@@ -1,7 +1,7 @@
 import { duplicate, createCatBox } from "./functions";
 import MaineCoon from "./MaineCoon";
 
-const cat = new MaineCoon('だいふく', 'レッドタビー');
+const cat = new MaineCoon("だいふく", "レッドタビー");
 const cats = [cat, cat] as MaineCoon[];
 
 test("#duplicate", () => {

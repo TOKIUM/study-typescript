@@ -40,9 +40,11 @@ class SearchParamsStorage {
   get data(): Data {
     return this._data || this.defaultData;
   }
+
   set data(params) {
     this._data = { ...params };
   }
+
   get defaultData(): Data {
     return default_data;
   }

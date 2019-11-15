@@ -6,15 +6,15 @@ export default class Cat {
     public color: HairColor,
     public state: State = State.Awake,
     public feeling: Feeling = Feeling.Good
-  ) { }
+  ) {}
 
   sleep() {
-    this.state = State.Asleep
+    this.state = State.Asleep;
   }
 
   wake() {
-    this.state = State.Awake
-    this.feeling = Feeling.Bad
+    this.state = State.Awake;
+    this.feeling = Feeling.Bad;
   }
 
   changeColor(color: HairColor) {
@@ -22,6 +22,6 @@ export default class Cat {
   }
 
   eatSomething() {
-    this.feeling = Feeling.Good
+    this.feeling = Feeling.Good;
   }
 }
