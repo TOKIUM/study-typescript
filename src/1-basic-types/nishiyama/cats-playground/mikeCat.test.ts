@@ -2,7 +2,7 @@ import AbstractCat from "./AbstractCat";
 import Person from "./Person";
 import Toy from "./Toy";
 
-class MikeCat extends AbstractCat {
+export default　class MikeCat extends AbstractCat {
   readonly hairLength: number;
 
   constructor(name: string) {
@@ -49,5 +49,3 @@ test("play", () => {
   expect(mike.play(ball, owner)).toEqual("かいぬし、エサくれ！！");
   expect(mike.play(ball, stranger)).toEqual("zzz...");
 });
-
-export default MikeCat;
