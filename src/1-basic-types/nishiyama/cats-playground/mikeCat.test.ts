@@ -11,17 +11,13 @@ class MikeCat extends AbstractCat {
   }
 
   yawn(): string {
-    return 'Myaaaaa....zzz';
+    return "Myaaaaa....zzz";
   }
 
   play(toy: Toy, person?: Person): string {
     if (toy.name === "ねこじゃらし") {
       return `${toy.name}で遊ぶのたのしいにゃん！！`;
-    } else if (
-      toy.name === "ボール" &&
-      person &&
-      person.name === "かいぬし"
-    ) {
+    } else if (toy.name === "ボール" && person && person.name === "かいぬし") {
       return `かいぬし、エサくれ！！`;
     } else {
       return "zzz...";

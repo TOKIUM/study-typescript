@@ -33,7 +33,7 @@ export default class TamaCat extends AbstractCat {
   }
 
   yawn() {
-    return 'Tamanyaaaaaaan...zzz';
+    return "Tamanyaaaaaaan...zzz";
   }
 
   play(toy: lovingToy, person?: Person): string;
