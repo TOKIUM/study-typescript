@@ -1,6 +1,6 @@
 import AbstractCat from "./AbstractCat";
 
-class lovingToy {
+class LovingToy {
   name: "ねこじゃらし" | "紙くず";
 
   constructor(name: "ねこじゃらし" | "紙くず") {
@@ -8,7 +8,7 @@ class lovingToy {
   }
 }
 
-class ignoringToy {
+class IgnoringToy {
   name: "ボール" | "ちゅーる";
 
   constructor(name: "ボール" | "ちゅーる") {
@@ -32,17 +32,17 @@ export default class TamaCat extends AbstractCat {
     this.hairLength = 10;
   }
 
-  yawn() {
+  yawn(): string {
     return "Tamanyaaaaaaan...zzz";
   }
 
-  play(toy: lovingToy, person?: Person): string;
-  play(toy: ignoringToy, person?: Person): string;
+  play(toy: LovingToy, person?: Person): string;
+  play(toy: IgnoringToy, person?: Person): string;
   play(toy, person?): string {
-    if (toy instanceof lovingToy) {
+    if (toy instanceof LovingToy) {
       return `${toy.name}で遊ぶのたのしいにゃん！！`;
     } else if (
-      toy instanceof ignoringToy &&
+      toy instanceof IgnoringToy &&
       person &&
       person.name === "かいぬし"
     ) {
@@ -64,8 +64,8 @@ test("play", () => {
   const mike = new TamaCat("たま");
   const owner = new Person("かいぬし");
   const stranger = new Person("おじじゃん");
-  const nekojarashi = new lovingToy("ねこじゃらし");
-  const ball = new ignoringToy("ボール");
+  const nekojarashi = new LovingToy("ねこじゃらし");
+  const ball = new IgnoringToy("ボール");
 
   expect(mike.play(nekojarashi)).toEqual(
     "ねこじゃらしで遊ぶのたのしいにゃん！！"

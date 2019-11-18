@@ -1,6 +1,6 @@
 abstract class AbstractCat {
   name: string;
-  toy: any;
+  toy: any; // eslint-disable-line @typescript-eslint/no-explicit-any
   readonly hairLength: number;
 
   constructor(name: string) {
@@ -9,7 +9,7 @@ abstract class AbstractCat {
   }
 
   abstract yawn(): string;
-  abstract play(toy: any): void;
+  abstract play(toy: any): void; // eslint-disable-line @typescript-eslint/no-explicit-any
 }
 
 export default AbstractCat;
