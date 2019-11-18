@@ -1,44 +1,24 @@
-import Cat, { catName } from "./cat";
+import AbstractCat from "./AbstractCat";
+import Person from "./Person";
+import Toy from "./Toy";
 
-class lovingToy {
-  name: "ねこじゃらし" | "紙くず";
-
-  constructor(name: "ねこじゃらし" | "紙くず") {
-    this.name = name;
-  }
-}
-
-class ignoringToy {
-  name: "ボール" | "ちゅーる";
-
-  constructor(name: "ボール" | "ちゅーる") {
-    this.name = name;
-  }
-}
-
-class Person {
-  name: string;
-
-  constructor(name: string) {
-    this.name = name;
-  }
-}
-
-export default class MikeCat extends Cat {
+class MikeCat extends AbstractCat {
   readonly hairLength: number;
 
-  constructor(name: catName) {
+  constructor(name: string) {
     super(name);
     this.hairLength = 10;
   }
 
-  play(toy: lovingToy, person?: Person): string;
-  play(toy: ignoringToy, person?: Person): string;
-  play(toy, person?): string {
-    if (toy instanceof lovingToy) {
+  yawn(): string {
+    return 'Myaaaaa....zzz';
+  }
+
+  play(toy: Toy, person?: Person): string {
+    if (toy.name === "ねこじゃらし") {
       return `${toy.name}で遊ぶのたのしいにゃん！！`;
     } else if (
-      toy instanceof ignoringToy &&
+      toy.name === "ボール" &&
       person &&
       person.name === "かいぬし"
     ) {
@@ -53,15 +33,15 @@ test("mikeCat", () => {
   const mike = new MikeCat("みけ");
   expect(mike.name).toEqual("みけ");
   expect(mike.hairLength).toBe(10);
-  expect(mike.yawn()).toEqual("Nyaaaaaaaaaaaaan");
+  expect(mike.yawn()).toEqual("Myaaaaa....zzz");
 });
 
 test("play", () => {
   const mike = new MikeCat("みけ");
   const owner = new Person("かいぬし");
   const stranger = new Person("おじじゃん");
-  const nekojarashi = new lovingToy("ねこじゃらし");
-  const ball = new ignoringToy("ボール");
+  const nekojarashi = new Toy("ねこじゃらし");
+  const ball = new Toy("ボール");
 
   expect(mike.play(nekojarashi)).toEqual(
     "ねこじゃらしで遊ぶのたのしいにゃん！！"
@@ -73,3 +53,5 @@ test("play", () => {
   expect(mike.play(ball, owner)).toEqual("かいぬし、エサくれ！！");
   expect(mike.play(ball, stranger)).toEqual("zzz...");
 });
+
+export default MikeCat;

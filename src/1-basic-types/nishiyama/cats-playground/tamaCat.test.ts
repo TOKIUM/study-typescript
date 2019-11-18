@@ -1,4 +1,4 @@
-import Cat, { catName } from "./cat";
+import AbstractCat from "./AbstractCat";
 
 class lovingToy {
   name: "ねこじゃらし" | "紙くず";
@@ -24,12 +24,16 @@ class Person {
   }
 }
 
-export default class TamaCat extends Cat {
+export default class TamaCat extends AbstractCat {
   readonly hairLength: number;
 
-  constructor(name: catName) {
+  constructor(name: string) {
     super(name);
     this.hairLength = 10;
+  }
+
+  yawn() {
+    return 'Tamanyaaaaaaan...zzz';
   }
 
   play(toy: lovingToy, person?: Person): string;
@@ -53,7 +57,7 @@ test("mikeCat", () => {
   const mike = new TamaCat("たま");
   expect(mike.name).toEqual("たま");
   expect(mike.hairLength).toBe(10);
-  expect(mike.yawn()).toEqual("Nyaaaaaaaaaaaaan");
+  expect(mike.yawn()).toEqual("Tamanyaaaaaaan...zzz");
 });
 
 test("play", () => {
