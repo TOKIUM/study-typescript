@@ -13,6 +13,7 @@ interface Bird {
 type Penguin = Fish & Bird;
 
 function isPenguin(animal: any): animal is Penguin {
+  // TODO: anyは使わなくても良いのだ
   // eslint-disapbe @typescript-eslint/no-explicit-any
   return (
     (animal as Penguin).velocity !== undefined &&
