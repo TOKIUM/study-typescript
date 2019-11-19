@@ -51,6 +51,6 @@ describe("isPenguin", () => {
       velocity: 20,
       eyeColor: "blue"
     };
-    expect(isPenguin(catFishBird)).toBe(false);
+    expect(isPenguin(catFishBird)).toBe(true);
   });
 });
