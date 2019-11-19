@@ -1,4 +1,4 @@
-export default　class Person {
+export default class Person {
   name: string;
 
   constructor(name: string) {

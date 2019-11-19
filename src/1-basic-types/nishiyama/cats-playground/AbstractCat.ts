@@ -1,4 +1,4 @@
-export default　abstract class AbstractCat {
+export default abstract class AbstractCat {
   name: string;
   toy: any; // eslint-disable-line @typescript-eslint/no-explicit-any
   readonly hairLength: number;

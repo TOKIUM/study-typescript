@@ -2,7 +2,7 @@ import AbstractCat from "./AbstractCat";
 import Person from "./Person";
 import Toy from "./Toy";
 
-export default　class MikeCat extends AbstractCat {
+export default class MikeCat extends AbstractCat {
   readonly hairLength: number;
 
   constructor(name: string) {
