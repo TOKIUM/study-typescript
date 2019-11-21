@@ -1,15 +1,14 @@
 import CatLike from "./CatLike";
-// import DogLike from "./DogLike";
-// import FishLike from "./FishLike";
 import Giant from "./Giant";
 
 interface CatGiant extends CatLike, Giant {}
 
-describe("", () => {
-  type ViolentCat = Exclude<CatGiant, CatLike>; // neverになるのなんでなの？
-  const violentCat: ViolentCat = { riot: () => "" };
+describe("ViolentCat", () => {
+  type RemovingProps = "name" | "meo" | "height";
+  type ViolentCat = Omit<CatGiant, RemovingProps>;
+  const violentCat: ViolentCat = { riot: () => "にゃんにゃんにゃー" };
 
-  test("", () => {
-    expect(violentCat.riot()).toEqual("");
+  test("riot remains", () => {
+    expect(violentCat.riot()).toEqual("にゃんにゃんにゃー");
   });
 });
