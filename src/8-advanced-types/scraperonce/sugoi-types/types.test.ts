@@ -1,5 +1,4 @@
 import { Cat, Fish, Dog, Mammal, Namable, Swimmable } from "./types";
-import Cat from "#/1-basic-types/scraperonce/6-generics/Cat";
 
 describe('types', () => {
   test('cat eats fish', () => {
