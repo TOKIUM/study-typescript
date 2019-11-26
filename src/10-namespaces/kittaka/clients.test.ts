@@ -1,4 +1,4 @@
-import { Aws } from './clients';
+import { Aws, DK } from './clients';
 
 test("AwsClients#s3Client", () => {
   const secretkey = 'secretkey'
@@ -20,3 +20,6 @@ test("AwsClients#CloudWatchClient", () => {
   expect(cloudWatchClient.putMetric({ key: key, val: val })).toBe('send to ' + key);
 });
 
+test("DK", () => {
+  expect(DK.Api.getExpenseAmount('id')).toBe(108);
+});

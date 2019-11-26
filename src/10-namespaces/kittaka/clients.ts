@@ -28,3 +28,11 @@ export namespace Aws {
     }
   }
 }
+
+export namespace DK {
+  export namespace Api {
+    export const getExpenseAmount = (id: string): number => {
+      return 108; // 100円均一
+    }
+  }
+}
