@@ -1,12 +1,9 @@
-// import Flyable from './Flyable';
-// import Swimmable from './Swimmable';
-// import Speakable from './Speakable';
-// import Healable from './Healable';
+import * as capabilities from "./Capability";
 
-const flyable = new Capability.Flyable();
-const swimmable = new Capability.Swimmable();
-const speakable = new Capability.Speakable();
-const healable = new Capability.Healable();
+const flyable = new capabilities.Capability.Flyable();
+const swimmable = new capabilities.Capability.Swimmable();
+const speakable = new capabilities.Capability.Speakable();
+const healable = new capabilities.Capability.Healable();
 
 describe('Capability', () => {
   test('flyable', () => {
