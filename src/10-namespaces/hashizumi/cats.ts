@@ -4,12 +4,12 @@ export interface NekoSpeech {
 
 export class GenbaNeko implements NekoSpeech {
   nyanText(): string {
-    return 'ヨシ！'
+    return 'ヨシ！';
   }
 }
 
 export class DenwaNeko implements NekoSpeech {
   nyanText(): string {
-    return 'どうして夜中に起きてるんですか？'
+    return 'どうして夜中に起きてるんですか？';
   }
 }
