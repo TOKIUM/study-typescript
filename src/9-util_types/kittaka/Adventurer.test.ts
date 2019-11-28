@@ -4,19 +4,20 @@ test("airou test", () => {
   const airou = makeAdventurer({
     status: { hp: 100, mp: 0, satiety: 20 },
     actions: {
-      eat: (food: string) => {
+      eat(food: string) {
         if (food === 'fish') {
           // おいしく食べた🐟
-          this.satiety = this.satiety + 10;
+          this.hp += 10;
+          this.satiety += 10;
         }
         else if (food === 'caffe') {
           // ナニコレ😾
-          this.hp = this.hp - 20;
-          this.satiety = this.satiety + 5;
+          this.hp -= 20;
+          this.satiety += 5;
         }
         else {
           // 食べ物だと認識できない！お腹すいた...
-          this.satiety = this.satiety - 1;
+          this.satiety -= 1;
         }
       }
     }
