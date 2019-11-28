@@ -62,10 +62,10 @@ $ dce node yarn lint # will run eslint against all .ts files
 | 2019/11/19 ~ | https://www.typescriptlang.org/docs/handbook/type-compatibility.html |
 | 2019/11/19 ~ | https://www.typescriptlang.org/docs/handbook/advanced-types.html |
 | 2019/11/25 ~ | https://www.typescriptlang.org/docs/handbook/symbols.html |
-|  | https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html |
-|  | https://www.typescriptlang.org/docs/handbook/modules.html |
-|  | https://www.typescriptlang.org/docs/handbook/namespaces.html |
-|  | https://www.typescriptlang.org/docs/handbook/namespaces-and-modules.html |
+| 2019/11/26 ~ | https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html |
+| 2019/11/26 ~ | https://www.typescriptlang.org/docs/handbook/modules.html |
+| 2019/11/26 ~ | https://www.typescriptlang.org/docs/handbook/namespaces.html |
+| 2019/11/28 ~ | https://www.typescriptlang.org/docs/handbook/namespaces-and-modules.html |
 |  | https://www.typescriptlang.org/docs/handbook/module-resolution.html |
 |  | https://www.typescriptlang.org/docs/handbook/declaration-merging.html |
 |  | https://www.typescriptlang.org/docs/handbook/jsx.html |
