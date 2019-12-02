@@ -69,7 +69,7 @@ $ dce node yarn lint # will run eslint against all .ts files
 |  | https://www.typescriptlang.org/docs/handbook/module-resolution.html |
 |  | https://www.typescriptlang.org/docs/handbook/declaration-merging.html |
 |  | https://www.typescriptlang.org/docs/handbook/jsx.html |
-|  | https://www.typescriptlang.org/docs/handbook/decorators.html |
+| 2019/12/02 ~ | https://www.typescriptlang.org/docs/handbook/decorators.html |
 |  | https://www.typescriptlang.org/docs/handbook/mixins.html |
 |  | https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html |
 |  | https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html |
