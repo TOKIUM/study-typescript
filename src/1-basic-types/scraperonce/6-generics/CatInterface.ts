@@ -1,4 +1,4 @@
-export default interface ICat {
+export default interface CatInterface {
   name: string;
   color: string;
   hairLength: number;

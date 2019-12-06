@@ -1,5 +1,5 @@
-import { book, play, playWith } from "./functions";
 import Cat from "./Cat";
+import { book, play } from "./functions";
 import Toy from "./Toy";
 
 describe("functions", () => {

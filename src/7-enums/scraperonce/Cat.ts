@@ -1,4 +1,4 @@
-import { HairColor, State, Feeling } from "./enums";
+import { Feeling, HairColor, State } from "./enums";
 
 export default class Cat {
   constructor(
@@ -8,20 +8,20 @@ export default class Cat {
     public feeling: Feeling = Feeling.Good
   ) {}
 
-  sleep() {
+  sleep(): void {
     this.state = State.Asleep;
   }
 
-  wake() {
+  wake(): void {
     this.state = State.Awake;
     this.feeling = Feeling.Bad;
   }
 
-  changeColor(color: HairColor) {
+  changeColor(color: HairColor): void {
     this.color = color;
   }
 
-  eatSomething() {
+  eatSomething(): void {
     this.feeling = Feeling.Good;
   }
 }

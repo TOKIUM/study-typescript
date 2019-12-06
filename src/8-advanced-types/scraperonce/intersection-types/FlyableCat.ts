@@ -1,9 +1,9 @@
-import IPet from './IPet';
-import Bird from './Bird';
-import Fish, { isFish } from './Fish';
+import Bird from "./Bird";
+import Fish, { isFish } from "./Fish";
+import PetInterface from "./PetInterface";
 
-export default class FlyableCat implements IPet {
-  name = 'ふらいんぐにゃんこ';
+export default class FlyableCat implements PetInterface {
+  name = "ふらいんぐにゃんこ";
 
   eat(food: Fish | Bird): string {
     if (isFish(food)) {
@@ -14,16 +14,15 @@ export default class FlyableCat implements IPet {
   }
 
   meow(): string {
-    return '君と出会った軌跡みゃ';
+    return "君と出会った軌跡みゃ";
   }
 
   fly(): string {
-    return 'そらもとべるはずみゃ'
+    return "そらもとべるはずみゃ";
   }
 }
 
-
-export function isFlyableCat(pet: IPet): pet is FlyableCat {
+export function isFlyableCat(pet: PetInterface): pet is FlyableCat {
   return [
     (pet as FlyableCat).eat !== undefined,
     (pet as FlyableCat).meow !== undefined,

@@ -1,6 +1,6 @@
-import ICat from "./ICat";
+import CatInterface from "./CatInterface";
 
-export default class CatPerson<T extends ICat> {
+export default class CatPerson<T extends CatInterface> {
   constructor(private cat: T) {}
 
   sayName(): string {

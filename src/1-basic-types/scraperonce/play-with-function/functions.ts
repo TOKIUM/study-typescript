@@ -1,19 +1,19 @@
-import Toy from "./Toy";
 import Cat from "./Cat";
-import Person from "./Person";
 import GentlePerson from "./GentlePerson";
+import Person from "./Person";
+import Toy from "./Toy";
 
-export function book(cat: Cat, func: Function) {
+export function book(cat: Cat, func: Function): Function {
   return func.bind(cat);
 }
 
-export function play(toy: Toy) {
+export function play(toy: Toy): string {
   return [this.name, "は", toy.name, "で遊んでいます"].join("");
 }
 
 export function playWith(toy: Toy, person: Person);
 export function playWith(toy: Toy, person: GentlePerson);
-export function playWith(toy, person) {
+export function playWith(toy, person): string {
   if (person instanceof GentlePerson) {
     return [
       this.name,
