@@ -1,4 +1,7 @@
-export function mergeAbilities<First, Second>(first: First, second: Second): First & Second {
+export function mergeAbilities<First, Second>(
+  first: First,
+  second: Second
+): First & Second {
   const result = {} as First & Second;
 
   for (const prop in first) {

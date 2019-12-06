@@ -1,25 +1,29 @@
 export type Haired = {
-  hairColor: 'red' | 'brown' | 'gold' | 'black' | 'white' | 'blue',
-  hairLength: number
-}
+  hairColor: "red" | "brown" | "gold" | "black" | "white" | "blue";
+  hairLength: number;
+};
 
 export type Tailed = {
-  tailLength: number,
-}
+  tailLength: number;
+};
 
 export type Swimmable = {
-  swim: () => string
-}
+  swim: () => string;
+};
 
 export type Namable = {
-  name: string
-}
+  name: string;
+};
 
 export type Mammal<T extends Namable> = {
-  like: T,
-  eat: (food: T) => string
-}
+  like: T;
+  eat: (food: T) => string;
+};
 
 export type Cat<T extends Namable> = Mammal<T> & Namable & Tailed & Haired;
-export type Dog<T extends Namable> = Mammal<T> & Namable & Tailed & Haired & Swimmable;
+export type Dog<T extends Namable> = Mammal<T> &
+  Namable &
+  Tailed &
+  Haired &
+  Swimmable;
 export type Fish = Namable & Tailed & Swimmable;

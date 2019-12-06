@@ -1,8 +1,8 @@
-export default interface IPet {
+export default interface PetInterface {
   name: string;
   swim?(): string;
   meow?(): string;
   bark?(): string;
-  eat?(food: IPet): string;
+  eat?(food: PetInterface): string;
   fly?(): string;
 }

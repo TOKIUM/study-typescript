@@ -1,4 +1,4 @@
-import { duplicate, createCatBox } from "./functions";
+import { createCatBox, duplicate } from "./functions";
 import MaineCoon from "./MaineCoon";
 
 const cat = new MaineCoon("だいふく", "レッドタビー");

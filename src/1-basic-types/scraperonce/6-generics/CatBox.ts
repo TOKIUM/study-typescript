@@ -1,13 +1,17 @@
-import ICat from "./ICat";
+import CatInterface from "./CatInterface";
 
-export default class CatBox<T extends ICat> {
-  ingredients: T[] = [] as T[];
+export default class CatBox<T extends CatInterface> {
+  private _ingredients: T[] = [] as T[];
 
-  constructor(cats: T[]) {
-    this.ingredients = this.ingredients.concat(cats);
+  get ingredients(): T[] {
+    return this._ingredients.concat();
   }
 
-  add(cat: T) {
-    this.ingredients.push(cat);
+  constructor(cats: T[]) {
+    this._ingredients = this._ingredients.concat(cats);
+  }
+
+  public add(cat: T): void {
+    this._ingredients.push(cat);
   }
 }

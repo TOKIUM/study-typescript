@@ -1,21 +1,21 @@
-import { createCat } from './main';
-import { Cats } from './Cats';
+import { Cats } from "./Cats";
+import { createCat } from "./main";
 
 const Abyssinian = Cats.Abyssinian;
 const MaineCoon = Cats.MaineCoon;
 const AmericanShortHair = Cats.AmericanShortHair;
 
-test('create cats', () => {
-  const catAby = createCat('あび', Cats.Types.Abyssinian);
-  const catMaine = createCat('だいふく', Cats.Types.MaineCoon);
-  const catAme = createCat('もち', Cats.Types.AmericanShortHair);
+test("create cats", () => {
+  const catAby = createCat("あび", Cats.Types.Abyssinian);
+  const catMaine = createCat("だいふく", Cats.Types.MaineCoon);
+  const catAme = createCat("もち", Cats.Types.AmericanShortHair);
 
   expect(catAby).toBeInstanceOf(Abyssinian);
-  expect(catAby.name).toBe('あび');
+  expect(catAby.name).toBe("あび");
 
   expect(catMaine).toBeInstanceOf(MaineCoon);
-  expect(catMaine.name).toBe('だいふく');
+  expect(catMaine.name).toBe("だいふく");
 
   expect(catAme).toBeInstanceOf(AmericanShortHair);
-  expect(catAme.name).toBe('もち');
+  expect(catAme.name).toBe("もち");
 });
